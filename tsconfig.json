@@ -3,6 +3,8 @@
     "baseUrl": ".",
     "outDir": "dist",
     "paths": {
+      "@context": ["context/index"],
+      "@public/*": ["public/*"],
       "@components/*": ["components/*"],
       "@styles/*": ["styles/*"]
     },
