@@ -26,6 +26,6 @@ export const formatDate = (date: Date) => {
     month: '2-digit',
     day: '2-digit',
   };
-  const newDate = new Date(date);
+  const newDate = new Date(date.toString().replace(/-/g, '/'));
   return newDate.toLocaleDateString(navigator.language, options);
 };
