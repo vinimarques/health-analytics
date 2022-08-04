@@ -5,5 +5,5 @@ import HelloWorld from '@components/Header';
 
 test('renders a message', () => {
   const { getByText } = render(<HelloWorld />);
-  expect(getByText(/Hello World/i)).toBeInTheDocument();
+  expect(getByText(/Health Analytics/i)).toBeInTheDocument();
 });

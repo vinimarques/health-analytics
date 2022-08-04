@@ -16,6 +16,10 @@ const customJestConfig = {
   moduleDirectories: ['node_modules', '<rootDir>/'],
   testEnvironment: 'jest-environment-jsdom',
   moduleNameMapper: {
+    '@utils/(.*)': '<rootDir>/utils/$1',
+    '@constants/(.*)': '<rootDir>/constants/$1',
+    '@context': '<rootDir>/context/index',
+    '@public/(.*)': '<rootDir>/public/$1',
     '@components/(.*)': '<rootDir>/components/$1',
     '@styles/(.*)': '<rootDir>/styles/$1',
   },
