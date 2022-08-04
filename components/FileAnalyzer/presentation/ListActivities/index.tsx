@@ -1,14 +1,23 @@
 import { ActivitiesContext } from '@context';
+import { ActivitiesItemType } from '@constants/types';
 import { useContext } from 'react';
+import ActivityCard from '../ActivityCard';
+import { ActivitiesWrapper } from './style';
+import Header from '../Header';
 
 const ListActivities = () => {
-  const { activities } = useContext(ActivitiesContext);
+  const { activities, startDate, finalDate } = useContext(ActivitiesContext);
+
   return (
-    <ul>
-      {activities.map((item, index) => (
-        <li key={`${item.Type}_${index}`}>{item.Type}</li>
-      ))}
-    </ul>
+    <>
+      <Header startDate={startDate} finalDate={finalDate} />
+      <ActivitiesWrapper>
+        {activities &&
+          activities.map((item: ActivitiesItemType, index: number) => (
+            <ActivityCard data={item} key={index} />
+          ))}
+      </ActivitiesWrapper>
+    </>
   );
 };
 

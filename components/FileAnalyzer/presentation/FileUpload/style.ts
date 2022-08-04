@@ -1,3 +1,4 @@
+import { Colors } from '@constants/enums';
 import styled from 'styled-components';
 
 export const FileWrapper = styled.label`
@@ -15,7 +16,7 @@ export const FileWrapper = styled.label`
     font-size: 1.6rem;
     padding-bottom: 1rem;
     text-align: center;
-    color: #fb6775;
+    color: ${Colors.RED};
     font-weight: 500;
   }
 

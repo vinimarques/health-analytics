@@ -6,7 +6,9 @@
       "@context": ["context/index"],
       "@public/*": ["public/*"],
       "@components/*": ["components/*"],
-      "@styles/*": ["styles/*"]
+      "@styles/*": ["styles/*"],
+      "@constants/*": ["constants/*"],
+      "@utils/*": ["utils/*"]
     },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],

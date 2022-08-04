@@ -3,9 +3,9 @@ import Image from 'next/image';
 import Papa from 'papaparse';
 
 import { FileWrapper } from './style';
-import UploadImage from '@public/upload.png';
+import UploadImage from '@public/assets/img/upload.png';
 import { ActivitiesContext } from '@context';
-import { ActivitiesType } from 'context/types';
+import { ActivityType } from '@constants/types';
 
 const FileUpload = () => {
   const { addActivities } = useContext(ActivitiesContext);
@@ -19,7 +19,7 @@ const FileUpload = () => {
         skipEmptyLines: true,
         complete: (response) => {
           const { data } = response;
-          addActivities(data as ActivitiesType);
+          addActivities(data as ActivityType[]);
         },
       });
     }

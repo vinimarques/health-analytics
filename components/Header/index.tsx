@@ -2,7 +2,7 @@
 import React, { FC } from 'react';
 import { Header } from './style';
 
-import HealthImage from '@public/healthcare.png';
+import HealthImage from '@public/assets/img/healthcare.png';
 import Image from 'next/image';
 
 const HelloWorld: FC = () => {

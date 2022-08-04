@@ -3,8 +3,8 @@ import { FileUpload, ListActivities } from '../presentation';
 import { ActivitiesContext } from '@context';
 
 const FileAnalyzer = () => {
-  const { activities } = useContext(ActivitiesContext);
-  if (activities.length) return <ListActivities />;
+  const { isActive } = useContext(ActivitiesContext);
+  if (isActive) return <ListActivities />;
   return <FileUpload />;
 };
 
