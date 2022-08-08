@@ -10,6 +10,7 @@ const HeaderActivities = ({ startDate, finalDate }: HeaderType) => {
   return (
     <HeaderWrapper>
       <span>{startDate && formatDate(startDate)}</span>
+      <span>to</span>
       <span>{finalDate && formatDate(finalDate)}</span>
     </HeaderWrapper>
   );

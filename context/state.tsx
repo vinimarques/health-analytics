@@ -1,4 +1,5 @@
 import React, { createContext, useState } from 'react';
+import moment from 'moment';
 import {
   ActivitiesType,
   ActivitiesContextState,
@@ -54,10 +55,10 @@ export const ActivitiesProvider = (props: Props) => {
         tempStart = date;
         tempFinal = date;
       } else {
-        if (tempStart !== null && new Date(date) < new Date(tempStart))
+        if (tempStart !== null && moment(date).isBefore(moment(tempStart)))
           tempStart = date;
 
-        if (tempFinal !== null && new Date(date) > new Date(tempFinal))
+        if (tempFinal !== null && moment(date).isAfter(moment(tempFinal)))
           tempFinal = date;
       }
 
