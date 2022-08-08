@@ -1,11 +1,16 @@
-export enum ActivityTypeEnum {
-  INDOORCYCLIN = 'IndoorCycling',
-  TRADITIONALSTRENGTHTRAINING = 'TraditionalStrengthTraining',
-  HIGHINTENSITYINTERVALTRAINING = 'HighIntensityIntervalTraining',
-  OUTDOORRUNNING = 'OutdoorRunning',
-  OUTDOORWALKING = 'OutdoorWalking',
-  PILATES = 'Pilates',
-}
+type ActivityTypeEnumType = {
+  [key: string]: string;
+};
+export const ActivityTypeEnum: ActivityTypeEnumType = {
+  INDOORCYCLIN: 'IndoorCycling',
+  TRADITIONALSTRENGTHTRAINING: 'TraditionalStrengthTraining',
+  HIGHINTENSITYINTERVALTRAINING: 'HighIntensityIntervalTraining',
+  OUTDOORRUNNING: 'OutdoorRunning',
+  OUTDOORWALKING: 'OutdoorWalking',
+  PILATES: 'Pilates',
+  INDOORWALKING: 'IndoorWalking',
+  OUTDOORCYCLING: 'OutdoorCycling',
+};
 
 export enum Colors {
   RED = '#f6666f',
