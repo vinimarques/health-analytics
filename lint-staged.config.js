@@ -7,6 +7,8 @@ module.exports = {
     `yarn eslint --fix ${filenames.join(' ')}`,
     `yarn prettier --write ${filenames.join(' ')}`,
   ],
+  // Jest
+  '**/*.(ts|tsx|js)': () => 'jest --findRelatedTests --coverage',
   // Format MarkDown and JSON
   '**/*.(md|json)': (filenames) =>
     `yarn prettier --write ${filenames.join(' ')}`,
