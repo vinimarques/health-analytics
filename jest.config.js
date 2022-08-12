@@ -24,7 +24,7 @@ const customJestConfig = {
     '@styles/(.*)': '<rootDir>/styles/$1',
   },
   coverageDirectory: 'coverage',
-  collectCoverageFrom: ['src/components/**/*.{js,jsx,ts,tsx}'],
+  collectCoverageFrom: ['./components/**/*.{js,jsx,ts,tsx}'],
 };
 
 module.exports = createJestConfig(customJestConfig);
