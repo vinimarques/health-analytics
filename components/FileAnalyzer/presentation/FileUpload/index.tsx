@@ -31,6 +31,8 @@ const FileUpload = () => {
         size={60}
         type="file"
         name="file"
+        data-testid="file-upload"
+        id="file-upload"
         onChange={fileChangeEvent}
         accept=".csv"
       />

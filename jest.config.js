@@ -25,6 +25,11 @@ const customJestConfig = {
   },
   coverageDirectory: 'coverage',
   collectCoverageFrom: ['./components/**/*.{js,jsx,ts,tsx}'],
+  coverageThreshold: {
+    global: {
+      lines: 100,
+    },
+  },
 };
 
 module.exports = createJestConfig(customJestConfig);
