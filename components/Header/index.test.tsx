@@ -1,9 +1,9 @@
 // helloWorld.test.tsx
 import React from 'react';
 import { render } from '@testing-library/react';
-import HelloWorld from '@components/Header';
+import Header from '@components/Header';
 
 test('renders a message', () => {
-  const { getByText } = render(<HelloWorld />);
+  const { getByText } = render(<Header />);
   expect(getByText(/Health Analytics/i)).toBeInTheDocument();
 });

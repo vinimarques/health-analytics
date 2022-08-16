@@ -8,6 +8,7 @@ import {
 
 type Props = {
   children: React.ReactNode;
+  initial?: ActivitiesContextState;
 };
 
 const contextDefaultValues: ActivitiesContextState = {
@@ -23,6 +24,7 @@ export const ActivitiesContext =
   createContext<ActivitiesContextState>(contextDefaultValues);
 
 export const ActivitiesProvider = (props: Props) => {
+  const { initial } = props;
   const [activities, setActivities] = useState<ActivitiesType>(
     contextDefaultValues.activities
   );
@@ -83,13 +85,15 @@ export const ActivitiesProvider = (props: Props) => {
 
   return (
     <ActivitiesContext.Provider
-      value={{
-        activities,
-        addActivities,
-        isActive,
-        startDate,
-        finalDate,
-      }}
+      value={
+        initial || {
+          activities,
+          addActivities,
+          isActive,
+          startDate,
+          finalDate,
+        }
+      }
     >
       {props.children}
     </ActivitiesContext.Provider>
