@@ -14,10 +14,18 @@ export interface ActivityType {
 
 export type AddActivitiesType = (list: ActivityType[]) => void;
 
+export type SetModalType = (value: boolean) => void;
+
 export interface ActivitiesContextState {
   activities: ActivitiesType;
   addActivities: AddActivitiesType;
+  setModal: SetModalType;
   isActive: boolean;
+  modalActived: boolean;
   startDate: Date | null;
   finalDate: Date | null;
+}
+
+export interface ModalType {
+  actived: boolean;
 }

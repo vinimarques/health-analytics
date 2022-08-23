@@ -1,1 +1,1 @@
-export { ActivitiesContext, ActivitiesProvider } from './state';
+export { AppContext, AppProvider } from './state';

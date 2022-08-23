@@ -1,15 +1,17 @@
 import React from 'react';
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
-import { ActivitiesProvider } from '@context';
+import { AppProvider } from '@context';
 import FileUpload from './';
 import { ActivitiesContextState } from '@constants/types';
 
 const initialState: ActivitiesContextState = {
   activities: [],
   addActivities: () => jest.fn(),
+  setModal: () => jest.fn(),
   isActive: false,
   startDate: new Date('2022-08-10'),
   finalDate: new Date('2022-08-20'),
+  modalActived: false,
 };
 
 describe('FileUpload', () => {
@@ -34,11 +36,11 @@ describe('FileUpload', () => {
   it('should select a file', async () => {
     const mockAddActivities = jest.fn();
     render(
-      <ActivitiesProvider
+      <AppProvider
         initial={{ ...initialState, addActivities: mockAddActivities }}
       >
         <FileUpload />
-      </ActivitiesProvider>
+      </AppProvider>
     );
     const fileUpload = screen.getByTestId('file-upload');
 
