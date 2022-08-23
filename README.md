@@ -1,4 +1,5 @@
 ![image](https://user-images.githubusercontent.com/2599789/184702500-816fb9cb-5999-47dc-bc60-7178df3f8878.png)
+
 # Health Analytics
 
 This project aims to analyze the data that is exported from the "Workout - CSV Exporter" App, creating cards with the data of each activity.
@@ -16,7 +17,6 @@ This project is running on https://health-analytics.vercel.app/.
 - Styled Components
 - Moment.js
 - Papararse
-
 
 ## Run Locally
 
@@ -43,6 +43,7 @@ Start the server
 ```bash
   yarn dev
 ```
+
 ## Running Tests
 
 To run tests, run the following command
@@ -57,7 +58,6 @@ To run tests with coverage
   yarn test:ci
 ```
 
-
 ## Screenshots
 
 <div>
@@ -66,8 +66,9 @@ To run tests with coverage
 </div>
 
 ## Roadmap
-- [X] Show cards with activities from CSV;
-- [ ] Help component, showing how using the app; 
+
+- [x] Show cards with activities from CSV;
+- [ ] Help component, showing how using the app;
 - [ ] Screen share button, feature to create image for users to share on their social networks
 
 ## Badges
@@ -77,4 +78,3 @@ Add badges from somewhere like: [shields.io](https://shields.io/)
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
 [![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
-
