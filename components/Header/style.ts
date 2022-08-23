@@ -1,7 +1,7 @@
 import { Colors } from '@constants/enums';
 import styled from 'styled-components';
 
-export const Header = styled.header`
+export const HeaderWrapper = styled.header`
   padding: 0 2rem;
   background-color: ${Colors.BLACKGREY};
   display: flex;

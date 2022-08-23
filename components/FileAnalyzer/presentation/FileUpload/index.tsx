@@ -4,11 +4,11 @@ import Papa from 'papaparse';
 
 import { FileWrapper } from './style';
 import UploadImage from '@public/assets/img/upload.png';
-import { ActivitiesContext } from '@context';
+import { AppContext } from '@context';
 import { ActivityType } from '@constants/types';
 
 const FileUpload = () => {
-  const { addActivities } = useContext(ActivitiesContext);
+  const { addActivities } = useContext(AppContext);
 
   const fileChangeEvent = (event: React.ChangeEvent<HTMLInputElement>) => {
     const target = event.target as HTMLInputElement;

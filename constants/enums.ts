@@ -18,4 +18,6 @@ export enum Colors {
   GREY = '#14213d',
   BLACKGREY = '#001524',
   CARD = '#fca311',
+  MODAL = 'rgba(0,0,0,0.8)',
+  BLACK = '#000',
 }

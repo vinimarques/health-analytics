@@ -1,4 +1,4 @@
-import { ActivitiesContext } from '@context';
+import { AppContext } from '@context';
 import { ActivitiesItemType } from '@constants/types';
 import { useContext } from 'react';
 import ActivityCard from '../ActivityCard';
@@ -6,7 +6,7 @@ import { ActivitiesWrapper } from './style';
 import Header from '../Header';
 
 const ListActivities = () => {
-  const { activities, startDate, finalDate } = useContext(ActivitiesContext);
+  const { activities, startDate, finalDate } = useContext(AppContext);
 
   return (
     <>

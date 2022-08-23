@@ -1,16 +1,21 @@
-import '@styles/reset.css';
-import '@styles/globals.css';
+import ResetStyle from '@styles/reset';
+import GlobalStyle from '@styles/globals';
 import type { AppProps } from 'next/app';
 
 import Header from '@components/Header';
-import { ActivitiesProvider } from '@context';
+import { HelperModal, HelperButton } from '@components/Helper';
+import { AppProvider } from '@context';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ActivitiesProvider>
+    <AppProvider>
+      <ResetStyle />
+      <GlobalStyle />
       <Header />
+      <HelperButton />
       <Component {...pageProps} />
-    </ActivitiesProvider>
+      <HelperModal />
+    </AppProvider>
   );
 }
 
