@@ -1,17 +1,23 @@
 // src/components/helloWorld.tsx
 import React, { FC } from 'react';
-import { Header } from './style';
+import { HeaderWrapper } from './style';
 
 import HealthImage from '@public/assets/img/healthcare.png';
 import Image from 'next/image';
 
-const HelloWorld: FC = () => {
+const Header: FC = () => {
   return (
-    <Header>
-      <Image src={HealthImage} alt="Health Analytics" width="50" height="50" />
+    <HeaderWrapper>
+      <Image
+        src={HealthImage}
+        priority={true}
+        alt="Health Analytics"
+        width="50"
+        height="50"
+      />
       <h1>Health Analytics</h1>
-    </Header>
+    </HeaderWrapper>
   );
 };
 
-export default HelloWorld;
+export default Header;

@@ -15,15 +15,18 @@ const contextDefaultValues: ActivitiesContextState = {
   activities: [],
   //eslint-disable-next-line
   addActivities: () => {},
+  //eslint-disable-next-line
+  setModal: () => {},
   isActive: false,
   startDate: null,
   finalDate: null,
+  modalActived: false,
 };
 
-export const ActivitiesContext =
+export const AppContext =
   createContext<ActivitiesContextState>(contextDefaultValues);
 
-export const ActivitiesProvider = (props: Props) => {
+export const AppProvider = (props: Props) => {
   const { initial } = props;
   const [activities, setActivities] = useState<ActivitiesType>(
     contextDefaultValues.activities
@@ -31,6 +34,10 @@ export const ActivitiesProvider = (props: Props) => {
 
   const [isActive, setActive] = useState<boolean>(
     contextDefaultValues.isActive
+  );
+
+  const [modalActived, setModal] = useState<boolean>(
+    contextDefaultValues.modalActived
   );
 
   const [startDate, setStartDate] = useState<Date | null>(
@@ -84,7 +91,7 @@ export const ActivitiesProvider = (props: Props) => {
   };
 
   return (
-    <ActivitiesContext.Provider
+    <AppContext.Provider
       value={
         initial || {
           activities,
@@ -92,12 +99,14 @@ export const ActivitiesProvider = (props: Props) => {
           isActive,
           startDate,
           finalDate,
+          modalActived,
+          setModal,
         }
       }
     >
       {props.children}
-    </ActivitiesContext.Provider>
+    </AppContext.Provider>
   );
 };
 
-export default ActivitiesProvider;
+export default AppProvider;

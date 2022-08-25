@@ -4,11 +4,11 @@ import Papa from 'papaparse';
 
 import { FileWrapper } from './style';
 import UploadImage from '@public/assets/img/upload.png';
-import { ActivitiesContext } from '@context';
+import { AppContext } from '@context';
 import { ActivityType } from '@constants/types';
 
 const FileUpload = () => {
-  const { addActivities } = useContext(ActivitiesContext);
+  const { addActivities } = useContext(AppContext);
 
   const fileChangeEvent = (event: React.ChangeEvent<HTMLInputElement>) => {
     const target = event.target as HTMLInputElement;
@@ -37,7 +37,13 @@ const FileUpload = () => {
         accept=".csv"
       />
       <p>Select CSV File</p>
-      <Image src={UploadImage} width="80" height="80" alt="Upload file" />
+      <Image
+        priority={true}
+        src={UploadImage}
+        width="80"
+        height="80"
+        alt="Upload file"
+      />
     </FileWrapper>
   );
 };
