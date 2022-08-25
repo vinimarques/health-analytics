@@ -38,6 +38,7 @@ const ActivityCard = ({ data }: PropType) => {
       <ImageWrapper>
         {ImageSrcMap[data.type] && (
           <Image
+            priority={true}
             src={ImageSrcMap[data.type]}
             alt={`${data.type}`}
             width="50"

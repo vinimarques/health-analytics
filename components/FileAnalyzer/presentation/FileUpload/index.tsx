@@ -37,7 +37,13 @@ const FileUpload = () => {
         accept=".csv"
       />
       <p>Select CSV File</p>
-      <Image src={UploadImage} width="80" height="80" alt="Upload file" />
+      <Image
+        priority={true}
+        src={UploadImage}
+        width="80"
+        height="80"
+        alt="Upload file"
+      />
     </FileWrapper>
   );
 };

@@ -8,7 +8,13 @@ import Image from 'next/image';
 const Header: FC = () => {
   return (
     <HeaderWrapper>
-      <Image src={HealthImage} alt="Health Analytics" width="50" height="50" />
+      <Image
+        src={HealthImage}
+        priority={true}
+        alt="Health Analytics"
+        width="50"
+        height="50"
+      />
       <h1>Health Analytics</h1>
     </HeaderWrapper>
   );
