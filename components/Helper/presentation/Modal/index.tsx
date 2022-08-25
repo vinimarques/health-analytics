@@ -6,24 +6,30 @@ import {
   ModalContent,
   ModalWrapper,
   SliderWrapper,
+  Pagination,
+  Dot,
 } from './style';
 
 import Image from 'next/image';
-import Screen1 from '@public/assets/img/screens/screen_1.png';
-import Screen2 from '@public/assets/img/screens/screen_2.png';
-import Screen3 from '@public/assets/img/screens/screen_3.png';
-import Screen4 from '@public/assets/img/screens/screen_4.png';
-import Screen5 from '@public/assets/img/screens/screen_5.png';
-import Screen6 from '@public/assets/img/screens/screen_6.png';
-import Screen7 from '@public/assets/img/screens/screen_7.png';
+import Screen1 from '@public/assets/img/screens/screen_1.jpg';
+import Screen2 from '@public/assets/img/screens/screen_2.jpg';
+import Screen3 from '@public/assets/img/screens/screen_3.jpg';
+import Screen4 from '@public/assets/img/screens/screen_4.jpg';
+import Screen5 from '@public/assets/img/screens/screen_5.jpg';
+import Screen6 from '@public/assets/img/screens/screen_6.jpg';
+import Screen7 from '@public/assets/img/screens/screen_7.jpg';
 
 import { AppContext } from '@context';
 
+type goToSlideType = (index: number) => void;
+
 const Modal: FC = () => {
+  let goToSlideInst: goToSlideType;
   const { modalActived, setModal } = useContext(AppContext);
 
   const closeModal = () => {
     setModal(!modalActived);
+    goToSlideInst(0);
   };
 
   return (
@@ -45,6 +51,19 @@ const Modal: FC = () => {
           }}
           renderCenterRightControls={() => {
             return '';
+          }}
+          renderBottomCenterControls={(props) => {
+            const { currentSlide, slideCount, goToSlide } = props;
+            goToSlideInst = goToSlide;
+            const dots = [];
+
+            for (let i = 0; i < slideCount; i++) {
+              dots.push(
+                <Dot key={i.toString()} actived={i === currentSlide} />
+              );
+            }
+
+            return <Pagination>{dots}</Pagination>;
           }}
         >
           <SliderWrapper>

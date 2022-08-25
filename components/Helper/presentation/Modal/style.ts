@@ -1,5 +1,5 @@
 import { Colors } from '@constants/enums';
-import { ModalType } from '@constants/types';
+import { ModalType, DotType } from '@constants/types';
 import styled from 'styled-components';
 
 export const ModalWrapper = styled.div<ModalType>`
@@ -96,4 +96,25 @@ export const SliderWrapper = styled.div`
     border-radius: 8px;
     max-height: 55vh;
   }
+`;
+
+export const Pagination = styled.ul`
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+`;
+
+export const Dot = styled.li<DotType>`
+  display: block;
+  width: 8px;
+  height: 8px;
+  background: ${Colors.LIGHTGREY};
+  border-radius: 100%;
+  margin: 0 5px;
+  transition: all 0.3s;
+
+  ${(props) =>
+    props.actived &&
+    `  background: ${Colors.BLACK};
+`}
 `;
