@@ -29,3 +29,7 @@ export interface ActivitiesContextState {
 export interface ModalType {
   actived: boolean;
 }
+
+export interface DotType {
+  actived: boolean;
+}
