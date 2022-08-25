@@ -67,29 +67,29 @@ const Modal: FC = () => {
           }}
         >
           <SliderWrapper>
-            <Image src={Screen1} alt="App" />
+            <Image src={Screen1} priority={true} alt="App" />
             <p>Open the App</p>
           </SliderWrapper>
           <SliderWrapper>
-            <Image src={Screen2} alt="App" />
+            <Image src={Screen2} priority={true} alt="App" />
             <p>Click on share button.</p>
           </SliderWrapper>
           <SliderWrapper>
-            <Image src={Screen3} alt="App" />
+            <Image src={Screen3} priority={true} alt="App" />
             <p>Click on &quot;All workouts&quot; to filter period.</p>
           </SliderWrapper>
           <SliderWrapper>
-            <Image src={Screen4} alt="App" />
+            <Image src={Screen4} priority={true} alt="App" />
             <p>Select the period you want to analyze.</p>
           </SliderWrapper>
           <SliderWrapper>
-            <Image src={Screen5} alt="App" />
+            <Image src={Screen5} priority={true} alt="App" />
           </SliderWrapper>
           <SliderWrapper>
-            <Image src={Screen6} alt="App" />
+            <Image src={Screen6} priority={true} alt="App" />
           </SliderWrapper>
           <SliderWrapper>
-            <Image src={Screen7} alt="App" />
+            <Image src={Screen7} priority={true} alt="App" />
             <p>Select &quot;Only General Data&quot;.</p>
           </SliderWrapper>
         </Carousel>
